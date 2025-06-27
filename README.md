@@ -1,2 +1,2 @@
 # olapohaku
-Website for Kusari
+Website for Kuzari
