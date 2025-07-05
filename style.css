@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Combo&display=swap'); /* Placeholder for proprietary Title Font */
+
+body {
+  margin: 0;
+  font-family: 'Work Sans', sans-serif;
+  background-color: #f1efe7;
+  text-align: center;
+  color: #24242a;
+}
+
+header {
+  padding: 20px 10px;
+}
+
+header img {
+  max-width: 150px;
+  height: auto;
+}
+
+header h1 {
+  font-size: 5rem;
+  font-weight: 900;
+  margin: 10px 0;
+  font-family: 'Combo', cursive;
+  color: #24242a;
+}
+
+.hero {
+  position: relative;
+  margin: 0 auto;
+  max-width: 1200px;
+  padding: 0 8vw;
+}
+
+.hero img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.shop-link {
+  position: absolute;
+  bottom: 80px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 20px 40px;
+  border-radius: 8px;
+  text-decoration: none;
+  color: #000;
+  font-weight: bold;
+  font-size: 2.5rem;
+  font-family: 'Combo', cursive;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.shop-link:hover {
+  background-color: rgba(255, 255, 255, 0.95);
+  transform: translateX(-50%) scale(1.05);
+}
+
+
+section {
+  padding: 40px 10px;
+}
+
+section h2 {
+  font-size: 3rem;
+  font-weight: 700;
+  font-family: 'Combo', cursive;
+  color: #24242a;
+}
+
+.gallery-images {
+  display: flex;
+  justify-content: center;
+  gap: 80px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 8vw;
+  flex-wrap: wrap;
+}
+
+.gallery-images img {
+  width: 346.666px;
+  height: 346.666px;
+  object-fit: cover;
+  cursor: pointer;
+}
+
+.faq-item {
+  margin: 10px auto;
+  max-width: 600px;
+  text-align: left;
+}
+
+details {
+  background: #b85c38;
+  padding: 10px;
+  border-radius: 5px;
+  color: #24242a;
+}
+
+details[open] {
+  background: #cb7553;
+}
+
+summary {
+  cursor: pointer;
+  font-weight: bold;
+  font-family: 'Work Sans', sans-serif;
+  color: #f1efe7;
+}
+
+details p {
+  margin: 10px 0 0 0;
+  color: #24242a;
+}
+
+@media (max-width: 1100px) {
+  .gallery-images {
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    padding: 0 5vw;
+  }
+
+  .gallery-images img {
+    width: 80%;
+    height: auto;
+  }
+
+  .hero {
+    padding: 0 5vw;
+  }
+}
