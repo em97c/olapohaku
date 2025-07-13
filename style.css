@@ -21,13 +21,13 @@ header {
 .header-flex {
   display: flex;
   align-items: center;
-  justify-content: center; /* centers the whole logo+text block */
+  justify-content: center; 
   gap: 30px;
 }
 
 .header-flex img {
-  height: 100%; /* logo height will be aligned using flex */
-  max-height: 160px; /* prevent it from growing too large */
+  height: 100%;
+  max-height: 160px;
   width: auto;
   object-fit: contain;
 }
@@ -35,7 +35,7 @@ header {
 .header-title {
   display: flex;
   flex-direction: column;
-  align-items: flex-start; /* left-align the text */
+  align-items: flex-start; 
   justify-content: center;
   line-height: 1;
 }
@@ -94,21 +94,30 @@ section h2 {
   color: #24242a;
 }
 
-.gallery-images {
+..gallery-images {
   display: flex;
-  justify-content: center;
-  gap: 80px;
+  justify-content: center; 
+  gap: 16px;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 8vw;
-  flex-wrap: wrap;
+  padding: 0 16px;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+}
+
+.gallery-images a {
+  flex: 0 0 auto;
+  scroll-snap-align: start;
 }
 
 .gallery-images img {
-  width: 346.666px;
-  height: 346.666px;
+  width: 80vw;
+  max-width: 346.666px;
+  height: auto;
   object-fit: cover;
   cursor: pointer;
+  border-radius: 8px;
 }
 
 .faq-item {
@@ -140,25 +149,19 @@ details p {
   color: #24242a;
 }
 
-@media (max-width: 1100px) {
- .gallery-images {
-  display: flex;
-  justify-content: center;
-  gap: 80px;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 8vw;
-  flex-wrap: nowrap; /* changed from wrap to nowrap */
-  overflow-x: auto; /* optional: horizontal scroll on small screens */
+@media (max-width: 800px) {
+  .gallery-images {
+    justify-content: flex-start;
+    gap: 12px;
+    padding: 0 12px;
+  }
 }
 
-
   .gallery-images img {
-    width: 80%;
+    width: 85vw;
     height: auto;
-  }
+}
 
   .hero {
     padding: 0 5vw;
   }
-}
