@@ -94,13 +94,13 @@ section h2 {
   color: #24242a;
 }
 
-..gallery-images {
+.gallery-images {
   display: flex;
-  justify-content: center; 
-  gap: 16px;
+  justify-content: center;
+  gap: 24px;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 16px;
+  padding: 0 5vw;
   flex-wrap: nowrap;
   overflow-x: auto;
   scroll-snap-type: x mandatory;
@@ -149,17 +149,22 @@ details p {
   color: #24242a;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 1072px) {
   .gallery-images {
-    justify-content: flex-start;
-    gap: 12px;
-    padding: 0 12px;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+    padding: 0 5vw;
+    overflow-x: visible; /* no scroll needed when stacked */
   }
-}
+
+  .gallery-images a {
+    width: 85vw;
+  }
 
   .gallery-images img {
-    width: 85vw;
-    height: auto;
+    width: 100%;
+  }
 }
 
   .hero {
